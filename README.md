@@ -1,28 +1,33 @@
 # Data Analysis Using R
 
-R is a robust stastistical web tool to analyze large data sets. 
-
+[R](https://en.wikipedia.org/wiki/R_(programming_language)) is a programming language and free software environment for statistical computing and graphics. It is supported by the R Core Team and the R Foundation for Statistical Computing. It is widely used among statisticians and data miners for developing statistical software and data analysis. 
 
 ## Basics of R
 
 - Installing R Studio
   
-- Creating R Projects
+   R -Studio can be downloaded using the link: [Download R-Studio](https://www.rstudio.com/products/rstudio/download/) 
+
+- [Related Book : R for Data Science](https://jrnold.github.io/r4ds-exercise-solutions/)
   
 - Importing and Exporting Data
+  
+  `read.table("data or link")`
+
+  `read.csv("file.csv")`
   
 
 ## Common Commands
 
-1.  Printing data `print("Data analysis using R")`
+-  Printing data `print("Data analysis using R")`
 
         This command will help to print.
 
-2. Naming var ` col.names = c("var1", "var2", "var3")`
+- Naming var ` col.names = c("var1", "var2", "var3")`
 
         This will help to provide specific names ot columns/variables
 
-3. Finding number of observations ` n.row(data)`
+- Finding number of observations `nrow(data)`
 
        This command will help to find the number of observation in the data set by calculating number of rows. 
 
@@ -36,6 +41,7 @@ R is a robust stastistical web tool to analyze large data sets.
   ``` R
   hist(data$<var>)
   ```
+
 ![](/Rplot.png)
+
 ## Stastistical Tools
-fbfbgf
