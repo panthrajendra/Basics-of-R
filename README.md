@@ -12,9 +12,13 @@
   
 - Importing and Exporting Data
   
-  `read.table("data or link")`
+  ```R 
+  read.table("data or link")
+  ```
 
-  `read.csv("file.csv")`
+  ```R 
+  read.csv("file.csv")
+  ```
   
 
 ## Common Commands
