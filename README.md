@@ -4,7 +4,11 @@
 
 ## Table of contents
 
-[Common of R](#Common)
+1. [Basics of R](#Basics%20of%20R)
+2. [Common Commands for Data Management](Common%20Commands%20for%20Data%20Management)
+3. [test](#raj)
+
+
 
 ## Basics of R
 
@@ -52,7 +56,7 @@
   
   ![](/my_data1.png)
 
-## Common
+## Common Commands for Data Management {#raj}
 
 
 - Finding number of observations: `nrow(data)` and number of variable: `ncol(data)` in a certain dataset: data 
