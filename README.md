@@ -27,26 +27,28 @@
 
   #This will import data from "http://www.stat.wmich.edu/naranjo/EMdatasets/btt.txt" and save as my_data1
   ```
-  
+
   <span style="color: Red;"> If you are importing file from computer, make sure the file to be imported is on same directory as R.script. OTHERWISE it will show error. </span>
 
 - Naming columns/variables for imported file
 
-## Common Commands
-
-- Printing in R `print("text")`
-
   ```r
-   print("I am Learning R-language.")
-   ```
+  #Assume a dataset called data has variables V1, V2, and V3, the columns can be named as follows:
+  names(data) = c("V1", "V2", "V3")
 
-  <span style="color: Skyblue;"> This command will print: I am learning R-language.</span>
+  #for our dataset, variables are: "childid", "sex", "bweight", "gestage", "momage", "parity", "mdbp", "msbp", "momeduc", "mmedaid", "socio", "dbp5", "sbp5", "ht5", "wt5", "hdl5", "ldl5", "trig5", "smoke5", "medaid5", "socio5"
 
+  names(my_data) = c("childid", "sex", "bweight", "gestage", "momage", "parity", "mdbp", "msbp", "momeduc", "mmedaid", "socio", "dbp5", "sbp5", "ht5", "wt5", "hdl5", "ldl5", "trig5", "smoke5", "medaid5", "socio5")
 
-- Naming var `names(data) = c("var1", "var2", "var3")`
+  #function head will give only first few observation for all variables.
 
-  <span style="color: Skyblue;"> This will help to provide 
-  specific names to columns/variables.</span>
+  head(my_data1)
+  #output
+  ```
+  
+  ![](/my_data1.png)
+
+## Common Commands for Data Management
 
 
 - Finding number of observations: `nrow(data)` and number of variable: `ncol(data)` in a certain dataset: data 
@@ -58,7 +60,7 @@
 
   dim(data) # gives the total number of rows and columns at once
   ```
-  <span style="color: Skyblue;"> This command will help to find the number of observation in the data set by calculating number of rows.</span>
+  <span style="color: Skyblue;"> The number of observation in the data set is number of rows and number of variables is number of columns.</span>
 
 - Acessing particular variable (column) or/and observation (row)
   ```r
@@ -67,6 +69,22 @@
 
   data[,c("V1")] # acesses V1 only
   data[,c("V1", "V2")] #acesses V1 and V2 from data
+  
+  #Using my_data1
+  my_data1[, c("childid")] # will acess childid only from my_data1
+
+  my_data1[, c("childid", "socio5", "momeduc")] #will acess childid, socio5, and mumeduc variable form my_data1
+
+  my_data1[1:10,] #will acess first 10 rows and all variables
+
+  my_data1[1:10, 1:5] #will acess first 10 rows/observations and first 5 variables or column
+
+  my_data1[20:40, c(1,3,5,6)] #will acess observation from 20-40 and varibles at position 1, 3, 5, and 6.
+
+  #mydata[rows, columns] general format
+```
+- 
+
 
 - 
 
