@@ -2,6 +2,10 @@
 
 [R](https://en.wikipedia.org/wiki/R_(programming_language)) is a programming language and free software environment for statistical computing and graphics. It is supported by the R Core Team and the R Foundation for Statistical Computing. It is widely used among statisticians and data miners for developing statistical software and data analysis. 
 
+## Table of contents
+
+[Common of R](#Common)
+
 ## Basics of R
 
 - Installing R Studio
@@ -48,7 +52,7 @@
   
   ![](/my_data1.png)
 
-## Common Commands for Data Management
+## Common
 
 
 - Finding number of observations: `nrow(data)` and number of variable: `ncol(data)` in a certain dataset: data 
