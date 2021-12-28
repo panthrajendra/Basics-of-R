@@ -72,6 +72,7 @@
   colnames(Matrix) = c("Height", "Weight") #adds names to columns
   Matrix
   ```
+
   ![](/Matrix_names.png)
 
   ```r
@@ -79,14 +80,15 @@
   Female = c(5.5, 65)
   matrix1 = (rbind(Male, Female)) #combines male and female observation creating a matrix
   matrix1
-
   ```
+
   ![](/matrix1.png)
 
   ```r
   colnames(matrix1) = c("Average_Height", "Average_Weight")
   matrix1
   ```
+
   ![](/matrix1_1.png)  
   
 - Naming columns/variables for imported file
@@ -111,7 +113,6 @@
 
 ## Common Commands for Data Management
 
-
 - Finding number of observations: `nrow(data)` and number of variable: `ncol(data)` in a certain dataset: data
 
   ```r
@@ -121,6 +122,7 @@
 
   dim(data) # gives the total number of rows and columns at once
   ```
+
   <span style="color: Skyblue;"> The number of observation in the data set is number of rows and number of variables is number of columns.</span>
 
 - Acessing particular variable (column) or/and observation (row)
@@ -170,6 +172,7 @@
     <span style="color: Red; font-style: italic"> Make sure you load the specific package before you use specific commands form it.</span>
 
 2. Selecting specific variables and creating new data set `select()`
+
    ```r
    library(tidyverse)
 
@@ -179,12 +182,15 @@
    ```
 
 3. Selecting specific data based on given condition `filter(data, var_condition)'
+
    ```r
    filter(my_data1, sex ==2) # gives data for all variables in data set: my_data1 for which sex is 
 
    filter(my_data1, childid>=50) # gives data for all variables in data set: my_data1 for which childid is equal or greater than 50
    ```
+
 4. Use of pipe (`%>%`) to filter and many more
+
    ```r
    my_data1 %>%
    filter(childid >=50)) # will do as in previous code
@@ -199,7 +205,7 @@
 ### Using built in R functions
   
 1. Scatter plot `plot(x,y)`
-   
+
    ```r
    plot(my_data1$bweight,my_data$msdp)
    ```
@@ -222,10 +228,7 @@
     abline(h = 3000, col = "blue") # will add a reference line at mothers sds = 3000
   ```
 
-  
   ![](/abline.png)
-
-
 
 1. Histogram `hist(data$var)`
    
@@ -264,13 +267,15 @@
    ```r
    boxplot(my_data1$momage ~ my_data1$socio5, xlab = "momage", ylab = "Age", main = "Boxpot of momage", col = rainbow(5))  #plots the boxplot of momage by socio5 form my_data1. col = rainbow(n) gives different color and n is number of color determined by number of boxplot
    ```
+
    ![](/multiboxplot.png)
 
 5. Piechart `pie(data$var, xlab = "", radious = "", main = "", col = "", clockwise)
+
    ```r
    pie(my_data1$socio5[1:5], labels = c("A", "B", "C", "D", "E"), main = "Piechart of momage", col = rainbow(5)) # creates piechart for first five observation of socio 5.
    ```
-   
+
    ![](/piechart.png)
 
 ### Using ggplot2
