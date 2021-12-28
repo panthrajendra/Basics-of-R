@@ -46,7 +46,7 @@
   #This will import data from "http://www.stat.wmich.edu/naranjo/EMdatasets/btt.txt" and save as my_data1
   ```
 
-   Note: <span style="color: Red; font-style: italic;"> If you are importing file from computer, make sure the file to be imported is on same directory as R.script. OTHERWISE it will show error. </span>
+  Note: <span style="color: Red; font-style: italic;"> If you are importing file from computer, make sure the file to be imported is on same directory as R.script. OTHERWISE it will show error. </span>
 
 - Exporting Data
     ```r
@@ -65,15 +65,14 @@
   # Assume two variables average Height (foot) and average weight (kg) for male and female as below:
   Matrix = matrix(c(6, 75, 5.5, 65), nrow =2 , ncol = 2, byrow = T) # creates a matrix with 2 rows and 2 columns.
   ```
-  ![](/matrix.png)
+  [<img src="Matrix.png" height ="90"/>](Matrix.png)
 
   ```r
   rownames(Matrix) = c("Male", "Female") # adds names to row
   colnames(Matrix) = c("Height", "Weight") #adds names to columns
   Matrix
   ```
-
-  ![](/Matrix_names.png)
+  [<img src="Matrix_names.png" height ="100"/>](Matrix_names.png)
 
   ```r
   Male = c(6, 75)
@@ -81,15 +80,13 @@
   matrix1 = (rbind(Male, Female)) #combines male and female observation creating a matrix
   matrix1
   ```
-
-  ![](/matrix1.png)
+  [<img src="matrix1.png" height ="70"/>](matrix1.png)
 
   ```r
   colnames(matrix1) = c("Average_Height", "Average_Weight")
   matrix1
   ```
-
-  ![](/matrix1_1.png)  
+  [<img src="matrix1_1.png" height ="70"/>](matrix1_1.png)
   
 - Naming columns/variables for imported file
 
@@ -209,8 +206,7 @@
    ```r
    plot(my_data1$bweight,my_data$msdp)
    ```
-
-   ![](/scatter.png)
+   [<img src="Scatter.png" height ="200"/>](Scatter.png)
 
 - Adding labels and colors
 
@@ -219,7 +215,7 @@
   plot(my_data1$bweight,my_data1$msdp, xlab = "Body Weight", ylab = "Mother's sdp", col = "red")
    ```
 
-  ![](/Scatter_c.png)
+   [<img src="Scatter_c.png" height ="200"/>](Scatter_c.png)
 
   ```r
   #Adding abline
@@ -228,14 +224,14 @@
     abline(h = 3000, col = "blue") # will add a reference line at mothers sds = 3000
   ```
 
-  ![](/abline.png)
+  [<img src="abline.png" height ="200"/>](abline.png)
 
 1. Histogram `hist(data$var)`
    
    ```r
    hist(my_data1$momeduc)
    ```
-   ![](/histogram.png)
+   [<img src="histogram.png" height ="200"/>](histogram.png)
   
   - Adding labels and colors
    
@@ -246,37 +242,35 @@
 
 <br>
 
-3. Bar plot `barplot(data$var, xlab = " ", ylab = " ", col = " ")`
+1. Bar plot `barplot(data$var, xlab = " ", ylab = " ", col = " ")`
    
    ```r
    barplot(my_data1$momage[1:10],xlab = "momage", ylab = "Frequency", main = "Barplot of momage", col = "orange") # gives barplot for first 10 observation of momage from my_data1. main gives title. This is a big data set and barplot for every observation looks messy. That is why I chose first 10 observations
    ```
-
-   ![](/bar_my_data1.png)
+   [<img src="bar_my_data1.png" height ="200"/>](bar_my_data1.png)
 
 <br>
 
-4. Boxplot ` boxplot(data$var, xlab = "", ylab = "", main = "", col = "")`
-   
+1. Boxplot ` boxplot(data$var, xlab = "", ylab = "", main = "", col = "")`
+
    ```r
    boxplot(my_data1$momage, xlab = "momage", ylab = "Age", main = "Boxpot of momage", col = "red") #plots the boxplot of momage form my_data1
    ```
 
-   ![](/boxplot.png)
+   [<img src="boxplot.png" height ="200"/>](boxplot.png)
 
    ```r
    boxplot(my_data1$momage ~ my_data1$socio5, xlab = "momage", ylab = "Age", main = "Boxpot of momage", col = rainbow(5))  #plots the boxplot of momage by socio5 form my_data1. col = rainbow(n) gives different color and n is number of color determined by number of boxplot
    ```
+   [<img src="multiboxplot.png" height ="200"/>](multiboxplot.png)
 
-   ![](/multiboxplot.png)
-
-5. Piechart `pie(data$var, xlab = "", radious = "", main = "", col = "", clockwise)
+2. Piechart `pie(data$var, xlab = "", radious = "", main = "", col = "", clockwise)
 
    ```r
    pie(my_data1$socio5[1:5], labels = c("A", "B", "C", "D", "E"), main = "Piechart of momage", col = rainbow(5)) # creates piechart for first five observation of socio 5.
    ```
 
-   ![](/piechart.png)
+   [<img src="piechart.png" height ="200"/>](piechart.png)
 
 ### Using ggplot2
 
