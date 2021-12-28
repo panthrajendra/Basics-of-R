@@ -46,7 +46,7 @@
   #This will import data from "http://www.stat.wmich.edu/naranjo/EMdatasets/btt.txt" and save as my_data1
   ```
 
-  > Note: <span style="color: Red; font-style: italic;"> If you are importing file from computer, make sure the file to be imported is on same directory as R.script. OTHERWISE it will show error. </span>
+   Note: <span style="color: Red; font-style: italic;"> If you are importing file from computer, make sure the file to be imported is on same directory as R.script. OTHERWISE it will show error. </span>
 
 - Exporting Data
     ```r
